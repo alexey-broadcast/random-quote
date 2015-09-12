@@ -55,7 +55,7 @@ gulp.task('sass', function () {
             includePaths: [cfg.src.scssDir]
         }))
         .pipe(autoprefixer('last 15 versions'))
-        //.pipe(minifyCss())
+        .pipe(minifyCss())
         .pipe(gulp.dest(cfg.build.cssDir))
         .pipe(connect.reload());
 });
@@ -68,7 +68,7 @@ gulp.task('js', function () {
         .pipe(plumber())
         .pipe(concat(cfg.build.mainJsFile))
         .pipe(traceur())
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(cfg.build.jsDir))
         .pipe(connect.reload());
 });

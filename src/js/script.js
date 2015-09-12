@@ -1,6 +1,6 @@
 "use strict" ;
 $(window).load(function () {
-    $(".loader-background").hide();
+    $(".loader-background").fadeOut(500);
 });
 
 $(document).ready(function () {
