@@ -11,20 +11,21 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <!-- stylesheet.css -->
-    <link href="stylesheet.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
     <!-- fonts -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <main>
+    <div class="loader-background">
+        <div class="loader-animation"></div>
+    </div>
+
     <div class="vertical-center">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3">
                 <div class="panel panel-default shadow" id="panel-main">
-                    <div class="text-right">
-                        <button type="button" class="btn shadow" id="btn-tweet">
-                        </button>
-                    </div>
+                    <button type="button" class="btn shadow" id="btn-tweet"></button>
                     <div class="panel-body" id="panel-quote"></div>
                     <div class="panel-footer text-right" id="panel-author"></div>
                 </div>
@@ -37,7 +38,7 @@
         </div>
     </div>
 </main>
-<footer class="text-right">
+<footer>
     Random quote <i>by</i> Alex L
 </footer>
 
@@ -47,6 +48,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!-- JavaScript -->
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,138 @@
+$picBackground: url("../pics/background.png");
+$picTwitter: url("../pics/twitter-black.png");
+
+
+
+////////////////////////////////////////////////////////////////
+/////////////////////////// GLOBAL /////////////////////////////
+////////////////////////////////////////////////////////////////
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: $picBackground;
+    background-position: center;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    margin-bottom: -1.5em;
+}
+
+.vertical-center {
+    padding: 20px;
+    overflow: auto;
+}
+
+footer {
+    height: 1.5em;
+    padding-right: 1em;
+    color: #DAA;
+}
+
+.shadow {
+    box-shadow: 0 6px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+/////////////////////////// PANEL //////////////////////////////
+////////////////////////////////////////////////////////////////
+
+.panel{
+    border: none;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+}
+
+#panel-quote {
+    font-style: italic;
+}
+
+#panel-author{
+    border: none;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    font-size: x-large;
+}
+
+
+////////////////////////////////////////////////////////////////
+/////////////////////////// BUTTONS/////////////////////////////
+////////////////////////////////////////////////////////////////
+
+$btnColor: rgba(255, 255, 255, 0.3);
+#btn-next {
+    $size: 50px;
+    background-color: $btnColor;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    font-size: $size / 2;
+    line-height: $size;
+    padding: 0 0;
+}
+
+#btn-tweet {
+    $size: 30px;
+    background-color: $btnColor;
+    background-image: $picTwitter;
+    background-position: center;
+    position: absolute;
+    left: $size * 1.5;
+    bottom: $size * 2;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
+
+#btn-next:focus, #btn-tweet:focus {
+    outline: none;
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+/////////////////////////// LOADER /////////////////////////////
+////////////////////////////////////////////////////////////////
+
+.loader-background{
+    background-color: #7E2B40;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+$loadSize: 150px;
+.loader-animation {
+    width: $loadSize;
+    height: $loadSize;
+    position: relative;
+    top: calc(50% - #{$loadSize} / 2);
+    background: #CE8EA0;
+    animation: animate 1s infinite ease-in-out;
+    margin: auto;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective($loadSize * 2) rotateX(0deg) rotateY(0deg);
+    } 50% {
+          transform: perspective($loadSize * 2) rotateX(-180deg) rotateY(0deg);
+    } 100% {
+        transform: perspective($loadSize * 2) rotateX(-180deg) rotateY(-180deg);
+    }
+}

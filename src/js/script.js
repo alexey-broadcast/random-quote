@@ -1,4 +1,8 @@
 "use strict" ;
+$(window).load(function () {
+    $(".loader-background").hide();
+});
+
 $(document).ready(function () {
 
     var pMain = $('#panel-main');
